@@ -22,7 +22,34 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
-  *[Installation](#installation)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+
+  ## Installation
+
+  ${data.installation}
+
+  ## Usage
+
+  ${data.usage}
+
+  ## Credits
+
+  ${data.credits}
+
+  ## Tests
+
+  ${data.tests}
+
+  ## Questions
+
+  For additional questions, you can check out my GitHub profile: https://github.com/${
+    data.github
+  } or email me at ${data.email} 
+
+  ## License
 
   ${renderLicenseLink(data.license)}
 
