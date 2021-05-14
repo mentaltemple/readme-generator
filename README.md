@@ -11,6 +11,8 @@ As a developer, I wanted to focus more time and energy on writing efficient and 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Tests](#tests)
+- [Questions](#questions)
 - [License](#license)
 
 ## Installation
