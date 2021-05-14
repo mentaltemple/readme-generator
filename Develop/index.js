@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 const path = require("path");
 const { clear } = require("console");
 
@@ -15,18 +15,17 @@ const questions = [
   {
     type: "input",
     message:
-      "Write a short description about your project. Motivation? Why? What problems is solved? What did you learn? ",
+      "Write a short description about your project. Motivation? What problems are solved? What did you learn? ",
     name: "description",
   },
   {
     type: "input",
-    message:
-      "(Installation) Provide a step-by-step description of how to get the dev environment running:",
+    message: "Provide step-by-step installation instructions:",
     name: "installation",
   },
   {
     type: "input",
-    message: "Provide instructions for use:",
+    message: "Provide detailed instructions for use:",
     name: "usage",
   },
   //add screenshots???
@@ -54,14 +53,15 @@ const questions = [
     type: "list",
     message: "Which license would you like to use?",
     choices: [
-      "GNU AGPLv3",
-      "GNU GPLv3",
-      "GNU LGPLv3",
-      "Mozilla Public 2.0",
-      "Apache 2.0",
+      "AGPLv3",
+      "GPLv3",
+      "LGPLv3",
+      "Mozilla",
+      "Apache",
       "MIT",
-      "Boost Software 1.0",
-      "The Unlicense",
+      "Boost",
+      "Unlicense",
+      "DWTFUW",
     ],
     name: "license",
   },
@@ -69,7 +69,6 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  console.log(data);
   //path (shipped module) - join method
   return fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log("Success!")
@@ -83,6 +82,7 @@ function init() {
     .prompt(questions)
     .then((data) => {
       //figure out how to take user responses and write to README
+
       writeToFile("README.md", generateMarkdown(data));
     })
     .catch();
