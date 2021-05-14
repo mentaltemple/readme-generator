@@ -1,10 +1,10 @@
-# 456
+# j
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Description
 
-798
+j
 
 ## Table of Contents
 
@@ -15,22 +15,24 @@
 
 ## Installation
 
-123
+j
 
 ## Usage
 
-4
+j
 
 ## Credits
 
+j
+
 ## Tests
 
-4
+j
 
 ## Questions
 
-For additional questions, you can check out my GitHub profile: https://github.com/4 or email me at 4
+For additional questions, you can check out my GitHub profile: https://github.com/j or email me at j
 
 ## License
 
-Unlicense
+This software is covered by the GPLv3 license. Please see more info here: https://choosealicense.com/licenses/gpl-3.0/

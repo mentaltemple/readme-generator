@@ -62,6 +62,7 @@ const questions = [
       "Boost",
       "Unlicense",
       "DWTFUW",
+      "None",
     ],
     name: "license",
   },

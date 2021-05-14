@@ -3,17 +3,17 @@
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink() {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection() {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   let license = data.license;
 
   let badge;
+  let licenseLink;
+
   function renderLicenseBadge(license) {
     switch (license) {
       case "AGPLv3":
@@ -51,15 +51,55 @@ function generateMarkdown(data) {
       case "DWTFUW":
         badge =
           "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)";
+        break;
+      default:
+        badge = "";
     }
-    console.log(badge);
     return badge;
   }
   renderLicenseBadge(license);
 
+  function renderLicenseLink(license) {
+    switch (license) {
+      case "AGPLv3":
+        licenseLink = "https://choosealicense.com/licenses/agpl-3.0/#";
+        break;
+      case "GPLv3":
+        licenseLink = "https://choosealicense.com/licenses/gpl-3.0/";
+        break;
+      case "LGPLv3":
+        licenseLink = "https://choosealicense.com/licenses/lgpl-3.0/";
+        break;
+      case "Mozilla":
+        licenseLink = "https://choosealicense.com/licenses/mpl-2.0/";
+        break;
+      case "Apache":
+        licenseLink = "https://choosealicense.com/licenses/apache-2.0/";
+        break;
+      case "MIT":
+        licenseLink = "https://choosealicense.com/licenses/mit/";
+        break;
+      case "Boost":
+        licenseLink = "https://choosealicense.com/licenses/bsl-1.0/";
+        break;
+      case "Unlicense":
+        licenseLink = "https://choosealicense.com/licenses/unlicense/";
+        break;
+      case "DWTFUW":
+        licenseLink = "http://www.wtfpl.net/about/";
+        break;
+      default:
+        licenseLink = "";
+    }
+    console.log(licenseLink);
+    return licenseLink;
+  }
+  renderLicenseLink(license);
+
   return `# ${data.title}
   
   ${badge}
+
   ## Description
 
   ${data.description}
@@ -92,7 +132,7 @@ function generateMarkdown(data) {
   For additional questions, you can check out my GitHub profile: https://github.com/${data.github} or email me at ${data.email} 
 
   ## License
-  ${data.license}
+  This software is covered by the ${data.license} license. Please see more info here: ${licenseLink}
 `;
 }
 
