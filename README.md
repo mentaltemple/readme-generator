@@ -47,7 +47,11 @@ No testing available at this time.
 
 ## Questions
 
-For additional questions, you can check out my GitHub profile: https://github.com/mentaltemple or email me at mentaltemple@yahoo.com.
+For additional questions, you can check out my GitHub profile:
+
+https://github.com/mentaltemple
+
+or email me at mentaltemple@yahoo.com.
 
 ## License
 
